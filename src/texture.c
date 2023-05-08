@@ -6,7 +6,7 @@
 /*   By: ytouab <ytouab@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 22:27:29 by ytouab            #+#    #+#             */
-/*   Updated: 2022/11/14 01:46:28 by ytouab           ###   ########.fr       */
+/*   Updated: 2023/05/08 13:00:05 by ytouab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,32 @@ void	ft_color_parse(t_all *all)
 	all->mlx->ccolor = ft_atoi_index(all, cc, 0, 6);
 	free(fc);
 	free(cc);
+}
+
+void	ft_double_newline(char *s, t_all *all)
+{
+	size_t	i;
+	size_t	j;
+	size_t	x;
+	size_t	y;
+
+	i = ft_strlen(s) - 1;
+	x = ft_arr_len(all->splmap) - 6;
+	if (s[i] == '\n' && s[i - 1] == '\n')
+		i--;
+	j = 0;
+	y = 0;
+	while (i >= 0 && y < x)
+	{
+		if (s[i] == '\n' && s[i - 1] == '\n')
+			break ;
+		else if (s[i] == '\n')
+		{
+			j++;
+			y++;
+		}
+		i--;
+	}
+	if (j != x)
+		ft_error(all, 5);
 }

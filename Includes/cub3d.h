@@ -6,7 +6,7 @@
 /*   By: ytouab <ytouab@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:13:36 by ytouab            #+#    #+#             */
-/*   Updated: 2022/11/14 01:52:48 by ytouab           ###   ########.fr       */
+/*   Updated: 2023/05/08 01:14:02 by ytouab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,6 +172,7 @@ void	ft_arr_print(char **arr);
 void	ft_free_arr(char **arr);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
 
 void	ft_read(int fd, t_all *all);
 void	ft_map_checker(t_all *all);
@@ -190,6 +191,8 @@ void	ft_check_zero(t_all *all);
 void	ft_replace_texture(t_all *all, char *direction, int a);
 void	ft_texture(t_all *all);
 void	ft_player_position(t_all *all);
+void	ft_arr_trim(char **arr);
+void	ft_double_newline(char *s, t_all *all);
 
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
 char	*ft_put_nbr(int nbr, char *base, int sign, int i);

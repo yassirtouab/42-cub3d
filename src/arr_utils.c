@@ -6,7 +6,7 @@
 /*   By: ytouab <ytouab@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 22:23:00 by ytouab            #+#    #+#             */
-/*   Updated: 2022/11/14 01:24:48 by ytouab           ###   ########.fr       */
+/*   Updated: 2023/05/08 13:00:27 by ytouab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,14 @@ void	ft_free_arr(char **arr)
 	free(arr);
 }
 
-char	*ft_line_replace(char *old, char *new)
+void	ft_arr_trim(char **arr)
 {
-	if (!new)
-		return (NULL);
-	if (old)
+	int	i;
+
+	i = 0;
+	while (arr[i])
 	{
-		free(old);
-		old = NULL;
+		arr[i] = ft_strtrim(arr[i], " ");
+		i++;
 	}
-	return (ft_strdup(new));
 }

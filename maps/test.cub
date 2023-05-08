@@ -1,11 +1,9 @@
 NO     Imgs/new5.xpm
-SO    Imgs/new3.xpm
-WE      Imgs/new2.xpm
-EA        Imgs/new4.xpm
-
-F 25,60,44
-C      255,255,0
-
+    SO    Imgs/new3.xpm
+    WE      Imgs/new2.xpm
+      EA        Imgs/new4.xpm
+      F 25,60,44
+     C      255,255,0  
         1111111111111 11111111111
         10000000001101000000000001
         101100S001110000010000001

@@ -6,7 +6,7 @@
 /*   By: ytouab <ytouab@student.42abudhabi.ae>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 18:53:04 by ytouab            #+#    #+#             */
-/*   Updated: 2022/11/14 01:40:52 by ytouab           ###   ########.fr       */
+/*   Updated: 2023/05/08 01:07:30 by ytouab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int	ft_find_index(t_all *all, char **arr, char *s, size_t size)
 	int	i;
 
 	i = 0;
+	ft_arr_trim(arr);
 	if (!arr)
 		ft_error(all, 5);
 	while (arr[i] && i < 6)
